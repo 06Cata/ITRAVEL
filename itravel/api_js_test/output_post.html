@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+</head>
+<body>
+  <!-- 这里是原始的 HTML 结构，你可以根据需要保留或修改 -->
+
+  <div id="response-container"></div>
+
+  <script>
+    function getDataFromAPI() {
+      const county = sessionStorage.getItem('county');
+      const dates = sessionStorage.getItem('dates');
+      const departure_date = sessionStorage.getItem('departureDate');
+      const return_date = sessionStorage.getItem('returnDate');
+      // 檢查必填項目是否存在
+      if (!county || !dates) {
+        alert('請先填寫必填項目!');
+        return;
+      }
+
+      const data = {
+        county: county,
+        dates: dates,
+        departure_date: departure_date,
+        return_date: return_date
+      };
+
+      // 發送 API POST 請求
+      fetch('http://35.187.155.171:5000/Travel', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(data => {
+          // 在 form3.html 中顯示 API 回應的資料
+          const responseContainer = document.getElementById('response-container');
+          responseContainer.innerHTML = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+          // 處理錯誤
+          console.error('發生錯誤:', error);
+        });
+    }
+
+
+    // 在 form3.html 的載入時執行 API 請求
+    window.onload = function() {
+      getDataFromAPI();
+    };
+  </script>
+</body>
+</html>
+

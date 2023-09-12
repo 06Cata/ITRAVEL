@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>地點標示</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoA8lRIZnbpId8e8pYcMyfvcDmKIn-3e4&libraries=places"></script>
+  <script>
+    // 載入地圖並標示地點
+    function initMap() {
+      // 讀取 JSON 檔案
+      fetch('response_0813.json')
+        .then(response => response.json())
+        .then(data => {
+          const locations = data.message[0].day1[1];
+
+          // 設定地圖中心為第一個地點
+          const centerLatLng = new google.maps.LatLng(locations.morning_time.lat, locations.morning_time.lng);
+
+          // 初始化地圖
+          const map = new google.maps.Map(document.getElementById('map'), {
+            center: centerLatLng,
+            zoom: 10
+          });
+
+          // 在地圖上標示每個地點
+          for (const key in locations) {
+            if (key !== 'morning_time') {
+              const location = locations[key];
+              const markerLatLng = new google.maps.LatLng(location.lat, location.lng);
+              const marker = new google.maps.Marker({
+                position: markerLatLng,
+                map: map,
+                title: location.name
+              });
+            }
+          }
+        })
+        .catch(error => console.error('讀取 JSON 檔案錯誤', error));
+    }
+  </script>
+</head>
+<body onload="initMap()">
+  <div id="map" style="height: 400px;"></div>
+</body>
+</html>

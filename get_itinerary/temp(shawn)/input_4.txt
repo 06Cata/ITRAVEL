@@ -1,0 +1,30 @@
+{
+    "basic_days": 3,
+    "basic_city": "基隆市",
+    "food_importance": 4,
+    "food_tag": [
+        "速食餐廳",
+        "火鍋",
+        "韓式料理"
+    ],
+    "food_tag2": [
+        "小吃"
+    ],
+    "food_min_rating": 3.7,
+    "food_max_price": 5,
+    "hotel_importance": 2,
+    "hotel_tag": [
+        "民宿"
+    ],
+    "hotel_tag2": [
+        "停車場"
+    ],
+    "hotel_min_price": 11400,
+    "hotel_max_price": 13000,
+    "hotel_min_rating": 4.9,
+    "spot_importance": 1,
+    "spot_tag": [
+        "戶外活動"
+    ],
+    "spot_min_rating": 3.0
+}

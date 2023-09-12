@@ -1,0 +1,28 @@
+{
+    "county": "雲林縣",
+    "dates": 6,
+    "departure_date": "2023-09-30",
+    "return_date": "2023-10-06",
+    "hotel_level": 1,
+    "food_level": 4,
+    "viewpoint_level": 4,
+    "hotel_like_tag": [
+        "汽車旅館"
+    ],
+    "hotel_price_tag": 1746,
+    "hotel_other_tag": [
+        "接送服務"
+    ],
+    "food_taste_tag": [
+        "台式",
+        "燒烤"
+    ],
+    "food_price_tag": 4,
+    "food_other_tag": [
+        "寵物友善"
+    ],
+    "viewpoint_other_tag": [
+        "風景遊憩"
+    ],
+    "transportation": 1
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant Map</title>
+  <meta name="viewport" content="initial-scale=1.0">
+  <meta charset="utf-8">
+  <style>
+    /* Set the map height explicitly to define the size of the div element that contains the map. */
+    #map {
+      height: 70%; /* Adjust the height for the map */
+    }
+
+    /* Style the form container */
+    #search-form {
+      margin: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    /* Style the form labels and inputs */
+    label, input, button {
+      margin: 5px;
+    }
+
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=your-api-key&callback=initMap" 
+  async defer></script>
+
+</head>
+<body>
+  <div id="map"></div>
+  <div id="search-form">
+    <form>
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+
+  <script>
+    var map;
+    var markers = [];
+
+    var dayData; // To store the fetched JSON data
+
+    // Fetch JSON data from the file    
+    fetch('response_0813.json')
+      .then(response => response.json()) // Parse response as JSON
+      .then(data => {
+        dayData = data.message; // Access the 'message' property
+        initMap();
+      })
+      .catch(error => console.error('Error fetching JSON:', error));
+
+    function filterActivities() {
+      var cityInput = document.getElementById('city').value;
+
+      var filteredActivities = [];
+
+      for (var day in dayData) {
+        if (dayData.hasOwnProperty(day)) {
+          var activities = dayData[day];
+          for (var time in activities) {
+            if (activities.hasOwnProperty(time)) {
+              var activity = activities[time];
+              console.log("Activity:", activity); // Add this line for debugging
+              if (activity.city === cityInput) {
+                filteredActivities.push(activity);
+              }
+            }
+          }
+        }
+      }
+
+      return filteredActivities;
+    }
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 23.6978, lng: 120.9605 }, // Centered in Taiwan
+        zoom: 8,
+      });
+    }
+
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent form submission
+
+      clearMarkers();
+
+      var filteredActivities = filterActivities(); // Get filtered activities
+      displayMarkers(filteredActivities);
+    });
+
+    function clearMarkers() {
+      markers.forEach(function(marker) {
+        marker.setMap(null);
+      });
+      markers = [];
+    }
+
+    function displayMarkers(activities) {
+      activities.forEach(function(activity) {
+        var marker = new google.maps.Marker({
+          position: { lat: activity.lat, lng: activity.lng },
+          map: map,
+          title: activity.name,
+        });
+        markers.push(marker);
+      });
+    }
+  </script>
+
+</body>
+</html>

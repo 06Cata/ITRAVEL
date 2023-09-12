@@ -1,0 +1,28 @@
+{
+    "county": "桃園市",
+    "dates": 1,
+    "departure_date": "2023-09-26",
+    "return_date": "2023-09-27",
+    "hotel_level": 5,
+    "food_level": 2,
+    "viewpoint_level": 2,
+    "hotel_like_tag": [
+        "青年/背包旅館"
+    ],
+    "hotel_price_tag": 7103,
+    "hotel_other_tag": [
+        "健身房"
+    ],
+    "food_taste_tag": [
+        "酒",
+        "日式"
+    ],
+    "food_price_tag": 1,
+    "food_other_tag": [
+        "親子餐廳"
+    ],
+    "viewpoint_other_tag": [
+        "建築人文"
+    ],
+    "transportation": 2
+}

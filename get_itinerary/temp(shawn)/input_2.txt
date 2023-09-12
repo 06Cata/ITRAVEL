@@ -1,0 +1,30 @@
+{
+    "basic_days": 2,
+    "basic_city": "嘉義市",
+    "food_importance": 3,
+    "food_tag": [
+        "韓式料理",
+        "泰式料理",
+        "火鍋"
+    ],
+    "food_tag2": [
+        "韓式料理"
+    ],
+    "food_min_rating": 2.6,
+    "food_max_price": 3,
+    "hotel_importance": 5,
+    "hotel_tag": [
+        "民宿"
+    ],
+    "hotel_tag2": [
+        "SPA"
+    ],
+    "hotel_min_price": 6500,
+    "hotel_max_price": 15200,
+    "hotel_min_rating": 3.9,
+    "spot_importance": 4,
+    "spot_tag": [
+        "戶外活動"
+    ],
+    "spot_min_rating": 2.8
+}

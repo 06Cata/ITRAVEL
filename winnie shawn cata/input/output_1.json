@@ -1,0 +1,28 @@
+{
+    "county": "嘉義縣",
+    "dates": 7,
+    "departure_date": "2023-09-24",
+    "return_date": "2023-10-01",
+    "hotel_level": 2,
+    "food_level": 2,
+    "viewpoint_level": 1,
+    "hotel_like_tag": [
+        "青年/背包旅館"
+    ],
+    "hotel_price_tag": 4549,
+    "hotel_other_tag": [
+        "停車場"
+    ],
+    "food_taste_tag": [
+        "酒",
+        "中式港式"
+    ],
+    "food_price_tag": 3,
+    "food_other_tag": [
+        "親子餐廳"
+    ],
+    "viewpoint_other_tag": [
+        "風景遊憩"
+    ],
+    "transportation": 2
+}

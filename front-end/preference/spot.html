@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>景點偏好</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>景點偏好選項</h1>
+
+    <form id="form">
+      <label>在意程度：</label>
+      <div class="rating-container">
+        <!-- 在意程度選項 -->
+      </div>
+
+      <label>偏好室內或室外：</label>
+      <div id="indoor-outdoor-container">
+        <!-- 室內或室外選項 -->
+      </div>
+
+      <div style="height: 100px;"></div>
+
+      <button id="whatever-button" onclick="finishButton.click();">隨便</button>
+
+      <button id="finish-button" onclick="window.location.href = 'next.html';">選好了</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="spot.js"></script>
+
+</body>
+
+</html>

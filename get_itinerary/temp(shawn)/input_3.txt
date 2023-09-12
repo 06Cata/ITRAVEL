@@ -1,0 +1,30 @@
+{
+    "basic_days": 6,
+    "basic_city": "桃園市",
+    "food_importance": 1,
+    "food_tag": [
+        "川菜",
+        "居酒屋",
+        "日本料理"
+    ],
+    "food_tag2": [
+        "鐵板燒"
+    ],
+    "food_min_rating": 1.8,
+    "food_max_price": 5,
+    "hotel_importance": 2,
+    "hotel_tag": [
+        "民宿"
+    ],
+    "hotel_tag2": [
+        "停車場"
+    ],
+    "hotel_min_price": 10700,
+    "hotel_max_price": 14200,
+    "hotel_min_rating": 2.5,
+    "spot_importance": 3,
+    "spot_tag": [
+        "海洋"
+    ],
+    "spot_min_rating": 2.3
+}

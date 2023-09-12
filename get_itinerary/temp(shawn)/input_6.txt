@@ -1,0 +1,30 @@
+{
+    "basic_days": 7,
+    "basic_city": "臺南市",
+    "food_importance": 2,
+    "food_tag": [
+        "小吃",
+        "川菜",
+        "宵夜"
+    ],
+    "food_tag2": [
+        "宵夜"
+    ],
+    "food_min_rating": 1.6,
+    "food_max_price": 4,
+    "hotel_importance": 2,
+    "hotel_tag": [
+        "民宿"
+    ],
+    "hotel_tag2": [
+        "SPA"
+    ],
+    "hotel_min_price": 3800,
+    "hotel_max_price": 6600,
+    "hotel_min_rating": 4.2,
+    "spot_importance": 2,
+    "spot_tag": [
+        "海洋"
+    ],
+    "spot_min_rating": 4.5
+}

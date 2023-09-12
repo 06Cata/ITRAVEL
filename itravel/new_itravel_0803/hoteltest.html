@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>book2</title>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // 從 URL 中獲取參數
+      const urlParams = new URLSearchParams(window.location.search);
+      const destination = urlParams.get('destination');
+      const departureDate = urlParams.get('departureDate');
+      const returnDate = urlParams.get('returnDate');
+      const dates = urlParams.get('dates');
+
+      // 顯示參數值在頁面上
+      document.getElementById('destination').textContent = destination || '未填寫';
+      document.getElementById('departureDate').textContent = departureDate || '未填寫';
+      document.getElementById('returnDate').textContent = returnDate || '未填寫';
+      document.getElementById('dates').textContent = dates ? `你想去${dates}天` : '未填寫';
+
+      // 從 session storage 中獲取存儲的數據並顯示在頁面上
+      const hotelTypeString = sessionStorage.getItem('hotel_type');
+      const hotelRating = sessionStorage.getItem('hotel_rating');
+      const pricePerRoom = sessionStorage.getItem('priceperroom');
+
+      const hotelTypeArray = JSON.parse(hotelTypeString) || [];
+
+      // 找到對應的 HTML 元素，並將數據顯示在頁面上
+      document.getElementById('hotelType').textContent = hotelTypeArray.join(', ');
+      document.getElementById('rating').textContent = hotelRating || '未填寫';
+      document.getElementById('pricePerRoom').textContent = pricePerRoom || '未填寫';
+    });
+  </script>
+</head>
+<body>
+  <h1>訂房成功！這是你的住宿偏好選項：</h1>
+  <div>
+    <p>你想去的地方是： <span id="destination"></span></p>
+    <p>旅行日期是： <span id="departureDate"></span></p>
+    <p>返回日期是： <span id="returnDate"></span></p>
+    <p><span id="dates"></span></p>
+    <p>你偏好的住宿類型： <span id="hotelType"></span></p>
+    <p>在意程度： <span id="rating"></span></p>
+    <p>住宿可接受的價格（1晚）： <span id="pricePerRoom"></span></p>
+  </div>
+</body>
+</html>

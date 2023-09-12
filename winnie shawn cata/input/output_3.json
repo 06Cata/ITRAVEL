@@ -1,0 +1,28 @@
+{
+    "county": "新竹縣",
+    "dates": 2,
+    "departure_date": "2023-09-13",
+    "return_date": "2023-09-15",
+    "hotel_level": 4,
+    "food_level": 3,
+    "viewpoint_level": 3,
+    "hotel_like_tag": [
+        "汽車旅館"
+    ],
+    "hotel_price_tag": 2954,
+    "hotel_other_tag": [
+        "接送服務"
+    ],
+    "food_taste_tag": [
+        "美式義式",
+        "燒烤"
+    ],
+    "food_price_tag": 3,
+    "food_other_tag": [
+        "素食"
+    ],
+    "viewpoint_other_tag": [
+        "文化藝術"
+    ],
+    "transportation": 2
+}

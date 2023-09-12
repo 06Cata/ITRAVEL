@@ -1,0 +1,30 @@
+{
+    "basic_days": 7,
+    "basic_city": "宜蘭縣",
+    "food_importance": 2,
+    "food_tag": [
+        "泰式料理",
+        "火鍋",
+        "韓式料理"
+    ],
+    "food_tag2": [
+        "居酒屋"
+    ],
+    "food_min_rating": 1.2,
+    "food_max_price": 2,
+    "hotel_importance": 4,
+    "hotel_tag": [
+        "汽車旅館"
+    ],
+    "hotel_tag2": [
+        "停車場"
+    ],
+    "hotel_min_price": 19200,
+    "hotel_max_price": 20000,
+    "hotel_min_rating": 1.3,
+    "spot_importance": 2,
+    "spot_tag": [
+        "海洋"
+    ],
+    "spot_min_rating": 2.6
+}

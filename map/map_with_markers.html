@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a1b9b586fada16a4429fbaa7d1922fee {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_a1b9b586fada16a4429fbaa7d1922fee" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_a1b9b586fada16a4429fbaa7d1922fee = L.map(
+                "map_a1b9b586fada16a4429fbaa7d1922fee",
+                {
+                    center: [25.0, 121.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ca133c53aeef0831acc5fb793e4fea5a = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a1b9b586fada16a4429fbaa7d1922fee);
+        
+    
+            var marker_1a6adf3c8019759525212756272f94ba = L.marker(
+                [25.1273, 121.519],
+                {}
+            ).addTo(map_a1b9b586fada16a4429fbaa7d1922fee);
+        
+    
+        var popup_355b7a97fee129d27fce259902dbee23 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ffa36dc75478937865548f794ab8ad5 = $(`<div id="html_5ffa36dc75478937865548f794ab8ad5" style="width: 100.0%; height: 100.0%;">&lt;b&gt;軍艦岩廊道&lt;/b&gt;&lt;br&gt;台中市&lt;br&gt;標高192公尺的軍艦岩是大屯山系最南端的一個山嶺，它的位置在石牌榮總醫院後山...</div>`)[0];
+                popup_355b7a97fee129d27fce259902dbee23.setContent(html_5ffa36dc75478937865548f794ab8ad5);
+            
+        
+
+        marker_1a6adf3c8019759525212756272f94ba.bindPopup(popup_355b7a97fee129d27fce259902dbee23)
+        ;
+
+        
+    
+    
+            marker_1a6adf3c8019759525212756272f94ba.bindTooltip(
+                `<div>
+                     台中市
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ed5eafcbf4953678be29cc668ff0dbd6 = L.marker(
+                [25.0941, 121.548],
+                {}
+            ).addTo(map_a1b9b586fada16a4429fbaa7d1922fee);
+        
+    
+        var popup_5fe5ad38078fad11ef34606b1f8142db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_54cffc90196923eb1fa5ce2e8c620f49 = $(`<div id="html_54cffc90196923eb1fa5ce2e8c620f49" style="width: 100.0%; height: 100.0%;">&lt;b&gt;錢穆故居&lt;/b&gt;&lt;br&gt;台北市&lt;br&gt;錢穆故居原名「素書樓」，民國五十六年，錢穆先生以一代儒宗地位，在政府懇邀之下來到台灣的雙溪定居...</div>`)[0];
+                popup_5fe5ad38078fad11ef34606b1f8142db.setContent(html_54cffc90196923eb1fa5ce2e8c620f49);
+            
+        
+
+        marker_ed5eafcbf4953678be29cc668ff0dbd6.bindPopup(popup_5fe5ad38078fad11ef34606b1f8142db)
+        ;
+
+        
+    
+    
+            marker_ed5eafcbf4953678be29cc668ff0dbd6.bindTooltip(
+                `<div>
+                     台北市
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_449e90e937c2a2f4de16c45a09e2070a = L.marker(
+                [25.0882, 121.526],
+                {}
+            ).addTo(map_a1b9b586fada16a4429fbaa7d1922fee);
+        
+    
+        var popup_76faf830553d1705ee0fd9a622ff796d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bbacf177eb29b2e9f4cace50c22a32ca = $(`<div id="html_bbacf177eb29b2e9f4cace50c22a32ca" style="width: 100.0%; height: 100.0%;">&lt;b&gt;八芝蘭涼麵—士林涼麵/士林烏龍麵/士林小吃推薦&lt;/b&gt;&lt;br&gt;台北市&lt;br&gt;</div>`)[0];
+                popup_76faf830553d1705ee0fd9a622ff796d.setContent(html_bbacf177eb29b2e9f4cace50c22a32ca);
+            
+        
+
+        marker_449e90e937c2a2f4de16c45a09e2070a.bindPopup(popup_76faf830553d1705ee0fd9a622ff796d)
+        ;
+
+        
+    
+    
+            marker_449e90e937c2a2f4de16c45a09e2070a.bindTooltip(
+                `<div>
+                     台北市
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8c980156707699d390ce02722ae42683 = L.marker(
+                [25.1537, 121.559],
+                {}
+            ).addTo(map_a1b9b586fada16a4429fbaa7d1922fee);
+        
+    
+        var popup_442c809fa0ee77a6ae0fd243a2d50e86 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d83145539a63204baad376b171e006dd = $(`<div id="html_d83145539a63204baad376b171e006dd" style="width: 100.0%; height: 100.0%;">&lt;b&gt;智慧環境會館-菁山遊憩區&lt;/b&gt;&lt;br&gt;台北市&lt;br&gt;</div>`)[0];
+                popup_442c809fa0ee77a6ae0fd243a2d50e86.setContent(html_d83145539a63204baad376b171e006dd);
+            
+        
+
+        marker_8c980156707699d390ce02722ae42683.bindPopup(popup_442c809fa0ee77a6ae0fd243a2d50e86)
+        ;
+
+        
+    
+    
+            marker_8c980156707699d390ce02722ae42683.bindTooltip(
+                `<div>
+                     台北市
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0fb619bfa66c1493961ddb7ad68e05c5 = L.marker(
+                [25.088, 121.525],
+                {}
+            ).addTo(map_a1b9b586fada16a4429fbaa7d1922fee);
+        
+    
+        var popup_1700385d1e611c1446a2f233243a3ce5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14ab51f08fa1de643bc2f8e07ad77edb = $(`<div id="html_14ab51f08fa1de643bc2f8e07ad77edb" style="width: 100.0%; height: 100.0%;">&lt;b&gt;台北無料案內所&lt;/b&gt;&lt;br&gt;台北市&lt;br&gt;</div>`)[0];
+                popup_1700385d1e611c1446a2f233243a3ce5.setContent(html_14ab51f08fa1de643bc2f8e07ad77edb);
+            
+        
+
+        marker_0fb619bfa66c1493961ddb7ad68e05c5.bindPopup(popup_1700385d1e611c1446a2f233243a3ce5)
+        ;
+
+        
+    
+    
+            marker_0fb619bfa66c1493961ddb7ad68e05c5.bindTooltip(
+                `<div>
+                     台北市
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_646582c7b4189995cbabeef48b6010e4 = L.marker(
+                [24.996, 121.576],
+                {}
+            ).addTo(map_a1b9b586fada16a4429fbaa7d1922fee);
+        
+    
+        var popup_e09849cf2006d06200d0cfb0d3c431c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff7223f42268cbce790be1449f410a17 = $(`<div id="html_ff7223f42268cbce790be1449f410a17" style="width: 100.0%; height: 100.0%;">&lt;b&gt;貓空纜車&lt;/b&gt;&lt;br&gt;台北市&lt;br&gt;貓空纜車為台北市第一個觀光休憩纜車...</div>`)[0];
+                popup_e09849cf2006d06200d0cfb0d3c431c6.setContent(html_ff7223f42268cbce790be1449f410a17);
+            
+        
+
+        marker_646582c7b4189995cbabeef48b6010e4.bindPopup(popup_e09849cf2006d06200d0cfb0d3c431c6)
+        ;
+
+        
+    
+    
+            marker_646582c7b4189995cbabeef48b6010e4.bindTooltip(
+                `<div>
+                     台北市
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>

@@ -1,0 +1,30 @@
+{
+    "basic_days": 5,
+    "basic_city": "南投縣",
+    "food_importance": 1,
+    "food_tag": [
+        "燒烤",
+        "泰式料理",
+        "鐵板燒"
+    ],
+    "food_tag2": [
+        "居酒屋"
+    ],
+    "food_min_rating": 1.8,
+    "food_max_price": 3,
+    "hotel_importance": 3,
+    "hotel_tag": [
+        "民宿"
+    ],
+    "hotel_tag2": [
+        "停車場"
+    ],
+    "hotel_min_price": 8300,
+    "hotel_max_price": 17500,
+    "hotel_min_rating": 3.8,
+    "spot_importance": 2,
+    "spot_tag": [
+        "戶外活動"
+    ],
+    "spot_min_rating": 4.3
+}

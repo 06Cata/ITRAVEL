@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>飲食偏好</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>飲食偏好選項</h1>
+
+
+    <form id="form">
+      <label>在意程度：</label>
+      <div class="rating-container">
+        <!-- 在意程度選項 -->
+      </div>
+
+      <label>這裡面你有特別愛吃的嗎：</label>
+      <div id="cuisine-container">
+        <!-- 這裡面你有特別愛吃的嗎選項 -->
+      </div>
+
+      <label>你可以接受的價位：</label>
+      <div class="price-container">
+        <!-- 你可以接受的價位選項 -->
+      </div>
+
+      <label for="hot-food">你追求熱門美食嗎：</label>
+      <div id="hot-food-container">
+        <!-- 你追求熱門美食嗎 -->
+      </div>
+
+      <label>其他需求：</label>
+      <div id="requirements-container">
+        <!-- 其他需求選項 -->
+      </div>
+
+      <div style="height: 100px;"></div>
+
+      <button id="whatever-button" onclick="finishButton.click();">隨便啦</button>
+
+      <button id="finish-button" onclick="window.location.href = 'next.html';">選好了</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="food.js"></script>
+
+</body>
+
+</html>

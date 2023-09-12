@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>必去</title>
+  <link rel="stylesheet" href="must.css">
+  <script src="must.js" async></script>
+</head>
+<body>
+  <div id="container">
+    <h1>必去</h1>
+
+    <div class="search-container">
+      <label for="search-input">請輸入地點，可以是餐廳、住宿、景點 ：</label>
+      <input type="text" id="search-input">
+      <div id="search-results"></div>
+    </div>
+
+    <div class="selected-places-container">
+      <h3>已選擇的地點：</h3>
+      <ul id="selected-places"></ul>
+    </div>
+    
+    <button id="whatever-button" onclick="finishButton.click();">隨便</button>
+
+    <button id="finish-button" onclick="window.location.href = 'next.html';">選好了</button>
+  </div>
+
+  
+</body>
+</html>

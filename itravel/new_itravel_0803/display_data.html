@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Traveler &mdash; User Data</title>
+</head>
+<body>
+  <h1>User Data</h1>
+  <ul>
+    <li><strong>在意程度:</strong> <span id="rating"></span></li>
+    <li><strong>偏好室內或室外:</strong> <span id="indoor_outdoor_option"></span></li>
+    <li><strong>是否自行開車:</strong> <span id="driving_option"></span></li>
+    <!-- Add more list items to display data from other pages if needed -->
+  </ul>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      // Retrieve and display the collected data from sessionStorage (or localStorage if used)
+      const rating = sessionStorage.getItem("rating");
+      const indoorOutdoorOption = sessionStorage.getItem("indoor_outdoor_option");
+      const drivingOption = sessionStorage.getItem("driving_option");
+      // Retrieve data from other pages as needed using sessionStorage.getItem()
+
+      document.getElementById("rating").textContent = rating;
+      document.getElementById("indoor_outdoor_option").textContent = indoorOutdoorOption;
+      document.getElementById("driving_option").textContent = drivingOption;
+      // Display data from other pages as needed
+
+      // Clear the data from sessionStorage (or localStorage) after displaying it
+      sessionStorage.removeItem("rating");
+      sessionStorage.removeItem("indoor_outdoor_option");
+      sessionStorage.removeItem("driving_option");
+      // Clear data from other pages as needed
+    });
+  </script>
+</body>
+</html>
+

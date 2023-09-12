@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>住宿偏好</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>住宿偏好選項</h1>
+
+    <form id="form">
+      <label>在意程度：</label>
+      <div class="rating-container">
+        <!-- 在意住宿的程度選項 -->
+      </div>
+
+      <label>你有偏好哪一種嗎：</label>
+      <div id="accommodation-container">
+        <!-- 住宿偏好選項 -->
+      </div>
+
+      <label>其他需求：</label>
+      <div id="requirements-container">
+        <!-- 其他需求選項 -->
+      </div>
+
+      <label for="price-range">最高可接受一晚的價錢：</label>
+      <input type="range" id="price-range" min="0" max="200000">
+      <span id="price-value">0</span>
+
+      <div style="height: 100px;"></div>
+
+      <button id="whatever-button" onclick="finishButton.click();">隨便啦</button>
+
+      <button id="finish-button" onclick="window.location.href = 'next.html';">選好了</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="hotel.js"></script>
+</body>
+
+</html>

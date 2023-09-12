@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智遊旅伴</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 20px 0;
+    }
+
+    h2 {
+      margin: 10px 0;
+    }
+
+    h3 {
+      margin: 10px 0;
+    }
+
+    h4 {
+      margin: 5px 0;
+    }
+
+    #response-container {
+      text-align: left;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    #day-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    #day-list li {
+      cursor: pointer;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: 5px;
+      display: inline-block;
+    }
+
+    #day-list li:hover {
+      background-color: #f2f2f2;
+    }
+
+    #day-list li:active {
+      background-color: #e5e5e5;
+    }
+  </style>
+</head>
+<body>
+  <h1>智遊旅伴</h1>
+  <h2 id="county"></h2>
+  <div>
+    <ul id="day-list">
+      <!-- Day buttons will be dynamically added here -->
+    </ul>
+  </div>
+  <div id="response-container"></div>
+  <script>
+    function getDataFromAPI() {
+      const county = sessionStorage.getItem('county');
+      const dates = sessionStorage.getItem('dates');
+      const departure_date = sessionStorage.getItem('departureDate');
+      const return_date = sessionStorage.getItem('returnDate');
+      // 檢查必填項目是否存在
+      if (!county || !dates) {
+        alert('請先填寫必填項目!');
+        return;
+      }
+
+      const data = {
+        county: county,
+        dates: dates,
+        departure_date: departure_date,
+        return_date: return_date
+      };
+
+      // 發送 API POST 請求
+      fetch('http://127.0.0.1:5000/Travel', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+      })
+        .then(response => response.json())
+        .then(data => {
+          // 在 form3.html 中顯示 API 回應的資料
+          const responseContainer = document.getElementById('response-container');
+          responseContainer.innerHTML = '';
+
+          const dayList = document.getElementById('day-list');
+          dayList.innerHTML = '';
+
+          // 顯示縣市名稱
+          const countyHeading = document.getElementById('county');
+          countyHeading.innerText = county;
+
+          // 顯示每一天的資訊
+          data.message.forEach((dayData, index) => {
+            const dayNum = index + 1;
+            const date = dayData[`day${dayNum}`][0];
+            const dayInfo = dayData[`day${dayNum}`][1];
+            const dayButton = document.createElement('li');
+            dayButton.textContent = `Day${dayNum} | ${date}`;
+            dayButton.addEventListener('click', () => showDayInfo(dayNum, date, dayInfo));
+            dayList.appendChild(dayButton);
+          });
+        })
+        .catch(error => {
+          // 處理錯誤
+          console.error('發生錯誤:', error);
+        });
+    }
+
+    // 在 form3.html 的載入時執行 API 請求
+    window.onload = function() {
+      getDataFromAPI();
+    };
+
+    function showDayInfo(dayNum, date, dayInfo) {
+      const responseContainer = document.getElementById('response-container');
+      responseContainer.innerHTML = '';
+
+      // 顯示 DayX | 日期 (xxxx-xx-xx)
+      const heading = document.createElement('h2');
+      heading.textContent = `Day${dayNum} | ${date}`;
+      responseContainer.appendChild(heading);
+
+      // 顯示上午行程
+      const morningHeading = document.createElement('h3');
+      morningHeading.textContent = '上午行程';
+      responseContainer.appendChild(morningHeading);
+      showActivityInfo(dayInfo['morning_time'], responseContainer);
+      // 顯示餐廳安排（如果有）
+      if (dayInfo['lunch']) {
+        showRestaurantInfo(dayInfo['lunch'], responseContainer);
+      }
+
+      // 顯示下午行程
+      const afternoonHeading = document.createElement('h3');
+      afternoonHeading.textContent = '下午行程';
+      responseContainer.appendChild(afternoonHeading);
+      showActivityInfo(dayInfo['afternoon_time1'], responseContainer);
+      showActivityInfo(dayInfo['afternoon_time2'], responseContainer);
+
+      // 顯示晚上行程（如果有）
+      if (dayInfo['dinner']) {
+        const dinnerHeading = document.createElement('h3');
+        dinnerHeading.textContent = '晚上行程';
+        responseContainer.appendChild(dinnerHeading);
+        showRestaurantInfo(dayInfo['dinner'], responseContainer);
+      }
+
+      // 顯示住宿安排
+      const hotelHeading = document.createElement('h3');
+      responseContainer.appendChild(hotelHeading);
+      showHotelInfo(dayInfo['hotel'], responseContainer);
+    }
+
+    function showActivityInfo(activity, container) {
+      if (!activity) {
+        return;
+      }
+
+      const activityName = activity['name'];
+      const activityCity = activity['city'];
+      const activityIntroduce = activity['introduce'];
+
+      const activityInfo = document.createElement('div');
+      activityInfo.innerHTML = `
+        <h4>景點安排 </h4>
+        <p>${activityName} | ${activityCity}</p>
+        <p>介紹 : ${activityIntroduce}</p>
+      `;
+
+      container.appendChild(activityInfo);
+    }
+
+    function showRestaurantInfo(restaurant, container) {
+      if (!restaurant) {
+        return;
+      }
+
+      const restaurantName = restaurant['name'];
+      const restaurantCity = restaurant['city'];
+      const restaurantAddress = restaurant['address'];
+      const restaurantTime = restaurant['time'].join('<br>');
+      const restaurantStar = restaurant['star'];
+
+      const restaurantInfo = document.createElement('div');
+      restaurantInfo.innerHTML = `
+        <h4>餐廳安排 </h4>
+        <p>${restaurantName} | ${restaurantCity}</p>
+        <p>地址 : ${restaurantAddress}</p>
+        <p>營業時間 : ${restaurantTime}</p>
+        <p>評分 : ${restaurantStar}</p>
+      `;
+
+      container.appendChild(restaurantInfo);
+    }
+
+    function showHotelInfo(hotel, container) {
+      if (!hotel) {
+        return;
+      }
+
+      const hotelName = hotel['name'];
+      const hotelCity = hotel['city'];
+      const hotelAddress = hotel['address'];
+      const hotelPhone = hotel['phone'];
+
+      const hotelInfo = document.createElement('div');
+      hotelInfo.innerHTML = `
+        <h4>住宿安排 </h4>
+        <p>${hotelName} | ${hotelCity}</p>
+        <p>地址 : ${hotelAddress}</p>
+        <p>電話 : ${hotelPhone}</p>
+      `;
+
+      container.appendChild(hotelInfo);
+    }
+  </script>
+</body>
+</html>

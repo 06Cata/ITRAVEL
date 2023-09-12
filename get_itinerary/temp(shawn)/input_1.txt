@@ -1,0 +1,30 @@
+{
+    "basic_days": 3,
+    "basic_city": "新竹市",
+    "food_importance": 1,
+    "food_tag": [
+        "宵夜",
+        "燒烤",
+        "川菜"
+    ],
+    "food_tag2": [
+        "速食餐廳"
+    ],
+    "food_min_rating": 4.4,
+    "food_max_price": 4,
+    "hotel_importance": 5,
+    "hotel_tag": [
+        "汽車旅館"
+    ],
+    "hotel_tag2": [
+        "停車場"
+    ],
+    "hotel_min_price": 14800,
+    "hotel_max_price": 17300,
+    "hotel_min_rating": 3.6,
+    "spot_importance": 5,
+    "spot_tag": [
+        "海洋"
+    ],
+    "spot_min_rating": 4.4
+}

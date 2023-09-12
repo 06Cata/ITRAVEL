@@ -1,0 +1,30 @@
+{
+    "basic_days": 7,
+    "basic_city": "金門縣",
+    "food_importance": 5,
+    "food_tag": [
+        "韓式料理",
+        "泰式料理",
+        "鐵板燒"
+    ],
+    "food_tag2": [
+        "燒烤"
+    ],
+    "food_min_rating": 3.7,
+    "food_max_price": 2,
+    "hotel_importance": 3,
+    "hotel_tag": [
+        "飯店/旅館/酒店"
+    ],
+    "hotel_tag2": [
+        "停車場"
+    ],
+    "hotel_min_price": 19700,
+    "hotel_max_price": 19800,
+    "hotel_min_rating": 3.3,
+    "spot_importance": 1,
+    "spot_tag": [
+        "戶外活動"
+    ],
+    "spot_min_rating": 4.0
+}

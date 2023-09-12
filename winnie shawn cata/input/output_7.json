@@ -1,0 +1,28 @@
+{
+    "county": "臺北市",
+    "dates": 6,
+    "departure_date": "2023-09-13",
+    "return_date": "2023-09-19",
+    "hotel_level": 5,
+    "food_level": 1,
+    "viewpoint_level": 4,
+    "hotel_like_tag": [
+        "青年/背包旅館"
+    ],
+    "hotel_price_tag": 5832,
+    "hotel_other_tag": [
+        "停車場"
+    ],
+    "food_taste_tag": [
+        "韓式",
+        "燒烤"
+    ],
+    "food_price_tag": 2,
+    "food_other_tag": [
+        "素食"
+    ],
+    "viewpoint_other_tag": [
+        "風景遊憩"
+    ],
+    "transportation": 1
+}

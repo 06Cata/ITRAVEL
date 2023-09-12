@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8ee7334335a25f768f32d2be4dd7c20f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8ee7334335a25f768f32d2be4dd7c20f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8ee7334335a25f768f32d2be4dd7c20f = L.map(
+                "map_8ee7334335a25f768f32d2be4dd7c20f",
+                {
+                    center: [23.061567456445996, 120.23713101045296],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_14aa0f354eb74550bf6395971b0f42d1 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_8ee7334335a25f768f32d2be4dd7c20f);
+        
+    
+            var marker_cluster_ed8098636df2e53edd8620dc5bf2feb9 = L.markerClusterGroup(
+                {}
+            );
+            map_8ee7334335a25f768f32d2be4dd7c20f.addLayer(marker_cluster_ed8098636df2e53edd8620dc5bf2feb9);
+        
+    
+            var marker_007a596e125a6b17510f844f7554fd9d = L.marker(
+                [23.0009, 120.162],
+                {}
+            ).addTo(marker_cluster_ed8098636df2e53edd8620dc5bf2feb9);
+        
+    
+            var icon_334010607ac7cf4c48b89c40d682309e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_007a596e125a6b17510f844f7554fd9d.setIcon(icon_334010607ac7cf4c48b89c40d682309e);
+        
+    
+        var popup_472da151d92414d8c54289c3f3baef13 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_027be710014fbb7d1af89b1e45855b2c = $(`<div id="html_027be710014fbb7d1af89b1e45855b2c" style="width: 100.0%; height: 100.0%;">延平街古井 - Source: viewpoint, Distance: 0 meters</div>`)[0];
+                popup_472da151d92414d8c54289c3f3baef13.setContent(html_027be710014fbb7d1af89b1e45855b2c);
+            
+        
+
+        marker_007a596e125a6b17510f844f7554fd9d.bindPopup(popup_472da151d92414d8c54289c3f3baef13)
+        ;
+
+        
+    
+    
+            var marker_a4ed1aa9672ccd9adfec28c023155e1f = L.marker(
+                [23.001, 120.164],
+                {}
+            ).addTo(marker_cluster_ed8098636df2e53edd8620dc5bf2feb9);
+        
+    
+            var icon_774f03531b6d8151ff7998918af09481 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a4ed1aa9672ccd9adfec28c023155e1f.setIcon(icon_774f03531b6d8151ff7998918af09481);
+        
+    
+        var popup_4c195d7ade2298afd31a215dc1b6ca58 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b18d4eec2a7b460bb38b28a2d043662 = $(`<div id="html_1b18d4eec2a7b460bb38b28a2d043662" style="width: 100.0%; height: 100.0%;">Suns' Great / 向光旅行 - Source: food, Distance: 222.92 meters</div>`)[0];
+                popup_4c195d7ade2298afd31a215dc1b6ca58.setContent(html_1b18d4eec2a7b460bb38b28a2d043662);
+            
+        
+
+        marker_a4ed1aa9672ccd9adfec28c023155e1f.bindPopup(popup_4c195d7ade2298afd31a215dc1b6ca58)
+        ;
+
+        
+    
+    
+            var marker_8621a7ec9ff92e35e2d7c73416397156 = L.marker(
+                [23.0018, 120.159],
+                {}
+            ).addTo(marker_cluster_ed8098636df2e53edd8620dc5bf2feb9);
+        
+    
+            var icon_fc4e4422b4448b9807a80a2b04f213c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8621a7ec9ff92e35e2d7c73416397156.setIcon(icon_fc4e4422b4448b9807a80a2b04f213c6);
+        
+    
+        var popup_d475bae568f6d88d546f9a84fb297662 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e86e43f13e64185f334a9fbb548e82a1 = $(`<div id="html_e86e43f13e64185f334a9fbb548e82a1" style="width: 100.0%; height: 100.0%;">德商東興洋行 - Source: viewpoint, Distance: 563.68 meters</div>`)[0];
+                popup_d475bae568f6d88d546f9a84fb297662.setContent(html_e86e43f13e64185f334a9fbb548e82a1);
+            
+        
+
+        marker_8621a7ec9ff92e35e2d7c73416397156.bindPopup(popup_d475bae568f6d88d546f9a84fb297662)
+        ;
+
+        
+    
+    
+            var marker_14889fe89a845a42c4448196f34a9e69 = L.marker(
+                [22.9995, 120.159],
+                {}
+            ).addTo(marker_cluster_ed8098636df2e53edd8620dc5bf2feb9);
+        
+    
+            var icon_8ebed4dd30b9808718b813b067cf8fcf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_14889fe89a845a42c4448196f34a9e69.setIcon(icon_8ebed4dd30b9808718b813b067cf8fcf);
+        
+    
+        var popup_c3dd141504ec0830f9f1d3fe1cd468ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ca8de83178f2812c60880b83d6c706ca = $(`<div id="html_ca8de83178f2812c60880b83d6c706ca" style="width: 100.0%; height: 100.0%;">安平小砲台 - Source: viewpoint, Distance: 256.04 meters</div>`)[0];
+                popup_c3dd141504ec0830f9f1d3fe1cd468ec.setContent(html_ca8de83178f2812c60880b83d6c706ca);
+            
+        
+
+        marker_14889fe89a845a42c4448196f34a9e69.bindPopup(popup_c3dd141504ec0830f9f1d3fe1cd468ec)
+        ;
+
+        
+    
+    
+            var marker_211afb454dc8ed017b5d9cf80c5219b2 = L.marker(
+                [23.0004, 120.162],
+                {}
+            ).addTo(marker_cluster_ed8098636df2e53edd8620dc5bf2feb9);
+        
+    
+            var icon_c2eddced1b36d2e8eeb2216a1ceef5c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_211afb454dc8ed017b5d9cf80c5219b2.setIcon(icon_c2eddced1b36d2e8eeb2216a1ceef5c8);
+        
+    
+        var popup_e2216dbbb3ab6b06d6e8786f2aba45e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_436a94254221d88f8eaff573e8e423d4 = $(`<div id="html_436a94254221d88f8eaff573e8e423d4" style="width: 100.0%; height: 100.0%;">陳家蚵捲 - Source: food, Distance: 348.66 meters</div>`)[0];
+                popup_e2216dbbb3ab6b06d6e8786f2aba45e2.setContent(html_436a94254221d88f8eaff573e8e423d4);
+            
+        
+
+        marker_211afb454dc8ed017b5d9cf80c5219b2.bindPopup(popup_e2216dbbb3ab6b06d6e8786f2aba45e2)
+        ;
+
+        
+    
+    
+            var marker_bb933a91add8059992e674cc7cafc633 = L.marker(
+                [22.999, 120.163],
+                {}
+            ).addTo(marker_cluster_ed8098636df2e53edd8620dc5bf2feb9);
+        
+    
+            var icon_6df1b05da9fcbe9a9e1e1c4b63d4bccd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bb933a91add8059992e674cc7cafc633.setIcon(icon_6df1b05da9fcbe9a9e1e1c4b63d4bccd);
+        
+    
+        var popup_078bf9a7e5906d7d2825ffea2f100837 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a1e4c4d4e51f384ade93f984f62fa20 = $(`<div id="html_1a1e4c4d4e51f384ade93f984f62fa20" style="width: 100.0%; height: 100.0%;">運河十六民宿 - Source: hotel, Distance: 448.75 meters</div>`)[0];
+                popup_078bf9a7e5906d7d2825ffea2f100837.setContent(html_1a1e4c4d4e51f384ade93f984f62fa20);
+            
+        
+
+        marker_bb933a91add8059992e674cc7cafc633.bindPopup(popup_078bf9a7e5906d7d2825ffea2f100837)
+        ;
+
+        
+    
+    
+            var marker_cluster_c02225080675f377a9cb21eca48445cf = L.markerClusterGroup(
+                {}
+            );
+            map_8ee7334335a25f768f32d2be4dd7c20f.addLayer(marker_cluster_c02225080675f377a9cb21eca48445cf);
+        
+    
+            var marker_ac722fc06236aaa45b11e38e5126e5b9 = L.marker(
+                [23.3159, 120.268],
+                {}
+            ).addTo(marker_cluster_c02225080675f377a9cb21eca48445cf);
+        
+    
+            var icon_79dfccc70cb923b029be24209123dfde = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_ac722fc06236aaa45b11e38e5126e5b9.setIcon(icon_79dfccc70cb923b029be24209123dfde);
+        
+    
+        var popup_5c5efe6e07b32a29161fd58d2de9a26a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0c6f8a064e1cbdb54ef662094552ed5 = $(`<div id="html_a0c6f8a064e1cbdb54ef662094552ed5" style="width: 100.0%; height: 100.0%;">橋南老街（橋南街李宅） - Source: viewpoint, Distance: 0 meters</div>`)[0];
+                popup_5c5efe6e07b32a29161fd58d2de9a26a.setContent(html_a0c6f8a064e1cbdb54ef662094552ed5);
+            
+        
+
+        marker_ac722fc06236aaa45b11e38e5126e5b9.bindPopup(popup_5c5efe6e07b32a29161fd58d2de9a26a)
+        ;
+
+        
+    
+    
+            var marker_7fe69d08d5b7d70456ad1e80cfbdf8ce = L.marker(
+                [23.315, 120.267],
+                {}
+            ).addTo(marker_cluster_c02225080675f377a9cb21eca48445cf);
+        
+    
+            var icon_7c4bdd1311ab6cf568de8404facd25d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_7fe69d08d5b7d70456ad1e80cfbdf8ce.setIcon(icon_7c4bdd1311ab6cf568de8404facd25d6);
+        
+    
+        var popup_f5280f2d2a455df266ffb5b9bf0cb111 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c49f75561cb105058db2a4d6d6fe8ed2 = $(`<div id="html_c49f75561cb105058db2a4d6d6fe8ed2" style="width: 100.0%; height: 100.0%;">廚心食意無刺虱目專賣店 - Source: food, Distance: 149.77 meters</div>`)[0];
+                popup_f5280f2d2a455df266ffb5b9bf0cb111.setContent(html_c49f75561cb105058db2a4d6d6fe8ed2);
+            
+        
+
+        marker_7fe69d08d5b7d70456ad1e80cfbdf8ce.bindPopup(popup_f5280f2d2a455df266ffb5b9bf0cb111)
+        ;
+
+        
+    
+    
+            var marker_d205b6ab81a2965b339a07510041c85b = L.marker(
+                [23.32, 120.267],
+                {}
+            ).addTo(marker_cluster_c02225080675f377a9cb21eca48445cf);
+        
+    
+            var icon_edf4e1543c6d6d753889ac443cc320a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_d205b6ab81a2965b339a07510041c85b.setIcon(icon_edf4e1543c6d6d753889ac443cc320a2);
+        
+    
+        var popup_a767dfb304b8b229efa8601d3d6543e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8852273a9607d03629692d2f0d4c7752 = $(`<div id="html_8852273a9607d03629692d2f0d4c7752" style="width: 100.0%; height: 100.0%;">鹽水八角樓 - Source: viewpoint, Distance: 556.60 meters</div>`)[0];
+                popup_a767dfb304b8b229efa8601d3d6543e6.setContent(html_8852273a9607d03629692d2f0d4c7752);
+            
+        
+
+        marker_d205b6ab81a2965b339a07510041c85b.bindPopup(popup_a767dfb304b8b229efa8601d3d6543e6)
+        ;
+
+        
+    
+    
+            var marker_3734987f91e962bc7d927ad342a77daf = L.marker(
+                [23.3238, 120.266],
+                {}
+            ).addTo(marker_cluster_c02225080675f377a9cb21eca48445cf);
+        
+    
+            var icon_84c56f3b670b8f881c5ae8782aba0344 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3734987f91e962bc7d927ad342a77daf.setIcon(icon_84c56f3b670b8f881c5ae8782aba0344);
+        
+    
+        var popup_c7371c580e57a5fb95ab35f629383bec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_98b02d0dc10a3f45dc81a3a1c904f077 = $(`<div id="html_98b02d0dc10a3f45dc81a3a1c904f077" style="width: 100.0%; height: 100.0%;">鹽水武廟 - Source: viewpoint, Distance: 437.42 meters</div>`)[0];
+                popup_c7371c580e57a5fb95ab35f629383bec.setContent(html_98b02d0dc10a3f45dc81a3a1c904f077);
+            
+        
+
+        marker_3734987f91e962bc7d927ad342a77daf.bindPopup(popup_c7371c580e57a5fb95ab35f629383bec)
+        ;
+
+        
+    
+    
+            var marker_3c151b305c4e1c40ea321f8b9e166f7d = L.marker(
+                [23.3199, 120.268],
+                {}
+            ).addTo(marker_cluster_c02225080675f377a9cb21eca48445cf);
+        
+    
+            var icon_8ba93c8eb0b96e7632670e7473e47fe6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3c151b305c4e1c40ea321f8b9e166f7d.setIcon(icon_8ba93c8eb0b96e7632670e7473e47fe6);
+        
+    
+        var popup_ec08b1dc96011ef00726a3a991cc74ef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_26c6796a2079a3c1eaea85b49c7f0172 = $(`<div id="html_26c6796a2079a3c1eaea85b49c7f0172" style="width: 100.0%; height: 100.0%;">上好食堂 - Source: food, Distance: 487.91 meters</div>`)[0];
+                popup_ec08b1dc96011ef00726a3a991cc74ef.setContent(html_26c6796a2079a3c1eaea85b49c7f0172);
+            
+        
+
+        marker_3c151b305c4e1c40ea321f8b9e166f7d.bindPopup(popup_ec08b1dc96011ef00726a3a991cc74ef)
+        ;
+
+        
+    
+    
+            var marker_3d20ff7b2323156865a9adc905254439 = L.marker(
+                [23.3223, 120.271],
+                {}
+            ).addTo(marker_cluster_c02225080675f377a9cb21eca48445cf);
+        
+    
+            var icon_9b0457b4cf5994d4836a3aeab7e08c1a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
+            );
+            marker_3d20ff7b2323156865a9adc905254439.setIcon(icon_9b0457b4cf5994d4836a3aeab7e08c1a);
+        
+    
+        var popup_a5c0bb5d98edd938fd1a3fdfa5895f0b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2997e65d0410c659ba837248b78bc4c = $(`<div id="html_e2997e65d0410c659ba837248b78bc4c" style="width: 100.0%; height: 100.0%;">好生活整合國際旅宿 - Source: hotel, Distance: 581.11 meters</div>`)[0];
+                popup_a5c0bb5d98edd938fd1a3fdfa5895f0b.setContent(html_e2997e65d0410c659ba837248b78bc4c);
+            
+        
+
+        marker_3d20ff7b2323156865a9adc905254439.bindPopup(popup_a5c0bb5d98edd938fd1a3fdfa5895f0b)
+        ;
+
+        
+    
+    
+            var marker_cluster_58ae5f808625ccd326d4c649dc6ff089 = L.markerClusterGroup(
+                {}
+            );
+            map_8ee7334335a25f768f32d2be4dd7c20f.addLayer(marker_cluster_58ae5f808625ccd326d4c649dc6ff089);
+        
+    
+            var marker_792439d4fe21546b5a7cd7e1fbe64234 = L.marker(
+                [23.3421, 120.506],
+                {}
+            ).addTo(marker_cluster_58ae5f808625ccd326d4c649dc6ff089);
+        
+    
+            var icon_9c9884fe788f9b978bd8073d098e18c9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_792439d4fe21546b5a7cd7e1fbe64234.setIcon(icon_9c9884fe788f9b978bd8073d098e18c9);
+        
+    
+        var popup_bd5f3ec00e45afda8d5c5182758b5b84 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1bbd159c272f617a30b7f1ff2ab11716 = $(`<div id="html_1bbd159c272f617a30b7f1ff2ab11716" style="width: 100.0%; height: 100.0%;">紅葉公園 - Source: viewpoint, Distance: 0 meters</div>`)[0];
+                popup_bd5f3ec00e45afda8d5c5182758b5b84.setContent(html_1bbd159c272f617a30b7f1ff2ab11716);
+            
+        
+
+        marker_792439d4fe21546b5a7cd7e1fbe64234.bindPopup(popup_bd5f3ec00e45afda8d5c5182758b5b84)
+        ;
+
+        
+    
+    
+            var marker_3869968110cd48ae0c7fc9ff1b3fc93e = L.marker(
+                [23.341, 120.502],
+                {}
+            ).addTo(marker_cluster_58ae5f808625ccd326d4c649dc6ff089);
+        
+    
+            var icon_0dc37e80f5ae5a084ce6acd9f4050196 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3869968110cd48ae0c7fc9ff1b3fc93e.setIcon(icon_0dc37e80f5ae5a084ce6acd9f4050196);
+        
+    
+        var popup_97b1c4d11efdd35308f702691464d506 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ca43f90e7085436654f3c516bbb4074 = $(`<div id="html_5ca43f90e7085436654f3c516bbb4074" style="width: 100.0%; height: 100.0%;">竹茅土雞城 - Source: food, Distance: 461.81 meters</div>`)[0];
+                popup_97b1c4d11efdd35308f702691464d506.setContent(html_5ca43f90e7085436654f3c516bbb4074);
+            
+        
+
+        marker_3869968110cd48ae0c7fc9ff1b3fc93e.bindPopup(popup_97b1c4d11efdd35308f702691464d506)
+        ;
+
+        
+    
+    
+            var marker_cfecf30c22e94ece8fb52229eb7e861c = L.marker(
+                [23.3381, 120.504],
+                {}
+            ).addTo(marker_cluster_58ae5f808625ccd326d4c649dc6ff089);
+        
+    
+            var icon_9b9e95f3d040303c4c476ad8be20503c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cfecf30c22e94ece8fb52229eb7e861c.setIcon(icon_9b9e95f3d040303c4c476ad8be20503c);
+        
+    
+        var popup_720b27451bd41ef4674b6d59e5f84ab8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad8be600269719298a3ba1c5ddb68ffe = $(`<div id="html_ad8be600269719298a3ba1c5ddb68ffe" style="width: 100.0%; height: 100.0%;">嶺頂公園 - Source: viewpoint, Distance: 392.16 meters</div>`)[0];
+                popup_720b27451bd41ef4674b6d59e5f84ab8.setContent(html_ad8be600269719298a3ba1c5ddb68ffe);
+            
+        
+
+        marker_cfecf30c22e94ece8fb52229eb7e861c.bindPopup(popup_720b27451bd41ef4674b6d59e5f84ab8)
+        ;
+
+        
+    
+    
+            var marker_dc1db4daf78bd2c8b721aa5ac1001876 = L.marker(
+                [23.3375, 120.504],
+                {}
+            ).addTo(marker_cluster_58ae5f808625ccd326d4c649dc6ff089);
+        
+    
+            var icon_01ce4a5809031f9522dfee176337180c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_dc1db4daf78bd2c8b721aa5ac1001876.setIcon(icon_01ce4a5809031f9522dfee176337180c);
+        
+    
+        var popup_8c632b42f9584bdc737a28828e1259a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1754a69fb1f2b57c931ffbad89a8a427 = $(`<div id="html_1754a69fb1f2b57c931ffbad89a8a427" style="width: 100.0%; height: 100.0%;">好漢坡 - Source: viewpoint, Distance: 66.79 meters</div>`)[0];
+                popup_8c632b42f9584bdc737a28828e1259a8.setContent(html_1754a69fb1f2b57c931ffbad89a8a427);
+            
+        
+
+        marker_dc1db4daf78bd2c8b721aa5ac1001876.bindPopup(popup_8c632b42f9584bdc737a28828e1259a8)
+        ;
+
+        
+    
+    
+            var marker_80671a696e7bb187f974e65b0adde7ef = L.marker(
+                [23.3361, 120.504],
+                {}
+            ).addTo(marker_cluster_58ae5f808625ccd326d4c649dc6ff089);
+        
+    
+            var icon_37a7e2d35c4e4be2d29c6afd73297f07 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_80671a696e7bb187f974e65b0adde7ef.setIcon(icon_37a7e2d35c4e4be2d29c6afd73297f07);
+        
+    
+        var popup_916cbeb8616fa8a90e05face45f759c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_804345b7eb37bc901b7d9f3a8119adc3 = $(`<div id="html_804345b7eb37bc901b7d9f3a8119adc3" style="width: 100.0%; height: 100.0%;">菜頭飯麵 - Source: food, Distance: 155.85 meters</div>`)[0];
+                popup_916cbeb8616fa8a90e05face45f759c7.setContent(html_804345b7eb37bc901b7d9f3a8119adc3);
+            
+        
+
+        marker_80671a696e7bb187f974e65b0adde7ef.bindPopup(popup_916cbeb8616fa8a90e05face45f759c7)
+        ;
+
+        
+    
+    
+            var marker_ccad00d716a4e7099660b2b28f869bd1 = L.marker(
+                [23.3361, 120.505],
+                {}
+            ).addTo(marker_cluster_58ae5f808625ccd326d4c649dc6ff089);
+        
+    
+            var icon_0376f26ea5a5ee3d60a84b1007dd2403 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ccad00d716a4e7099660b2b28f869bd1.setIcon(icon_0376f26ea5a5ee3d60a84b1007dd2403);
+        
+    
+        var popup_d73242a4db92e41fb83dc165fcc2e2a2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00443973747acfb3604c874b86299740 = $(`<div id="html_00443973747acfb3604c874b86299740" style="width: 100.0%; height: 100.0%;">沐春民宿 - Source: hotel, Distance: 191.52 meters</div>`)[0];
+                popup_d73242a4db92e41fb83dc165fcc2e2a2.setContent(html_00443973747acfb3604c874b86299740);
+            
+        
+
+        marker_ccad00d716a4e7099660b2b28f869bd1.bindPopup(popup_d73242a4db92e41fb83dc165fcc2e2a2)
+        ;
+
+        
+    
+</script>
+</html>
